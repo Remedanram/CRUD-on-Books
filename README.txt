@@ -1,23 +1,27 @@
-Mini Project - Spring Boot with PostgreSQL and Swagger
+Mini Project - Spring Boot with PostgreSQL, Swagger & Responsive Frontend
 Overview
-This mini project is developed using Spring Boot, enabling CRUD (Create, Read, Update, Delete) operations. It integrates with a PostgreSQL database using JDBC for data management. Additionally, Swagger is included to simplify API testing and documentation, making it easy to interact with the system.
+This mini project integrates a Spring Boot backend with PostgreSQL, offering CRUD (Create, Read, Update, Delete) operations for managing books. The backend uses JDBC to connect to the PostgreSQL database and provides a Swagger-powered interface for API documentation and testing. The front-end is a responsive application built using HTML, CSS, and JavaScript, which interacts with the backend to manage book data.
 
-Features
+Features:
+CRUD Operations for managing books (Create, Read, Update, Delete).
+PostgreSQL Integration using JDBC for data storage and management.
+Swagger Documentation to visualize and test API endpoints.
+Responsive Front-End built with HTML, CSS, and JavaScript.
+Interaction between front-end and backend using RESTful APIs.
+Technologies Used:
 
-CRUD Operations:
-Create, Read, Update, and Delete functionalities for the core entities.
+Backend:
 
-PostgreSQL Integration:
-Uses JDBC to connect to and interact with the PostgreSQL database.
+Spring Boot: Framework for building Java-based backend applications.
+PostgreSQL: Open-source relational database.
+JDBC: Java Database Connectivity for integrating PostgreSQL with Spring Boot.
+Swagger: API documentation and testing tool.
 
-Swagger API Documentation:
-Provides a user-friendly interface for testing all available API endpoints.
+Frontend:
 
-Technologies Used
-Spring Boot: For building the backend application.
-JDBC: For connecting and performing operations with the PostgreSQL database.
-PostgreSQL: A powerful, open-source relational database.
-Swagger: To automatically generate and visualize the RESTful API documentation.
+HTML: Markup language for building the UI.
+CSS: Styling language for making the UI responsive.
+JavaScript: For interacting with the backend APIs (via Fetch API or AJAX).
 Setup
 
 Clone the repository:

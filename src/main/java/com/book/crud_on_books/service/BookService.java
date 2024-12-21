@@ -47,4 +47,8 @@ public class BookService {
 
         bookRepository.deleteById(id);
     }
+
+    public void deleteAll() {
+        bookRepository.deleteAll();
+    }
 }

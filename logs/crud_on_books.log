@@ -1,0 +1,54 @@
+2024-12-17 11:58:04 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.com.example' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.com.example
+    Value: "DEBUG   # Replace 'com.example' with your base package name"
+    Origin: class path resource [application.properties] - 38:27
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.DEBUG   # Replace 'com.example' with your base package name)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+2024-12-17 11:58:36 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.com.example' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.com.example
+    Value: "DEBUG   # Replace 'com.example' with your base package name"
+    Origin: class path resource [application.properties] - 38:27
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.DEBUG   # Replace 'com.example' with your base package name)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+

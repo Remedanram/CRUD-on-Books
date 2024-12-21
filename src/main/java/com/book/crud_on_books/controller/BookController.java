@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/")
+@RequestMapping("/api/books")
 @RequiredArgsConstructor
 public class BookController {
 
@@ -23,10 +23,12 @@ public class BookController {
     // Get all books
     @Operation(summary = "Get all books", description = "Retrieve a list of all available books.")
     @ApiResponse(responseCode = "200", description = "Successfully retrieved the list of books.")
-    @GetMapping("/getbooks")
+    @GetMapping
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
+
+
 
     // Add a new book
     @Operation(summary = "Add a new book", description = "Add a new book to the database.")
@@ -34,7 +36,7 @@ public class BookController {
             @ApiResponse(responseCode = "200", description = "Book added successfully."),
             @ApiResponse(responseCode = "400", description = "Invalid input provided.")
     })
-    @PostMapping("/addbooks")
+    @PostMapping
     public ResponseEntity<Book> addbooks(@RequestBody BookRequestDto requestDto) {
         Book responseDto = bookService.add(requestDto);
         return ResponseEntity.ok(responseDto);
@@ -46,7 +48,7 @@ public class BookController {
             @ApiResponse(responseCode = "200", description = "Book found successfully."),
             @ApiResponse(responseCode = "404", description = "Book not found.")
     })
-    @GetMapping("/getbook/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Book> getBookById(@PathVariable Long id) {
         return bookService.getBookById(id)
                 .map(book -> ResponseEntity.ok().body(book))
@@ -59,7 +61,7 @@ public class BookController {
             @ApiResponse(responseCode = "200", description = "Book updated successfully."),
             @ApiResponse(responseCode = "404", description = "Book not found.")
     })
-    @PutMapping("/book/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody Book bookDetails) {
         Book updatedBook = bookService.updateBook(id, bookDetails);
         return ResponseEntity.ok(updatedBook);
@@ -71,8 +73,12 @@ public class BookController {
             @ApiResponse(responseCode = "200", description = "Book deleted successfully."),
             @ApiResponse(responseCode = "404", description = "Book not found.")
     })
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         bookService.deleteById(id);
+    }
+    @DeleteMapping
+    public void delete(){
+        bookService.deleteAll();
     }
 }

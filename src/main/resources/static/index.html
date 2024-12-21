@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book CRUD Application</title>
+    <link rel="stylesheet" href="stayles.css">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Book CRUD Application</h1>
+    <p>Manage your book collection with ease.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#getAllBooks">View All Books</a></li>
+        <li><a href="#addBook">Add a New Book</a></li>
+        <li><a href="#updateBook">Update Book</a></li>
+        <li><a href="#deleteBook">Delete a Book</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="getAllBooks">
+        <h2>All Books</h2>
+        <div class="book-list">
+            <!-- Books will be displayed here -->
+        </div>
+    </section>
+
+    <section id="addBook">
+        <h2>Add a New Book</h2>
+        <form id="addBookForm">
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" name="bookName" placeholder="Enter book name" required>
+            <label for="bookDescription">Description:</label>
+            <input type="text" id="bookDescription" name="bookDescription" placeholder="Enter book description" required>
+            <label for="cost">Cost:</label>
+            <input type="number" id="cost" name="cost" placeholder="Enter book cost" required>
+            <label for="numberOFPage">Number of Pages:</label>
+            <input type="number" id="numberOFPage" name="numberOFPage" placeholder="Enter number of pages" required>
+            <button type="submit">Add Book</button>
+        </form>
+    </section>
+
+    <section id="updateBook">
+        <h2>Update a Book</h2>
+        <form id="updateBookForm">
+            <label for="bookId">Book ID:</label>
+            <input type="number" id="bookId" name="bookId" placeholder="Enter book ID" required>
+            <label for="updatedBookName">Updated Book Name:</label>
+            <input type="text" id="updatedBookName" name="updatedBookName" placeholder="Enter updated book name" required>
+            <label for="updatedBookDescription">Updated Description:</label>
+            <input type="text" id="updatedBookDescription" name="updatedBookDescription" placeholder="Enter updated description" required>
+            <label for="updatedCost">Updated Cost:</label>
+            <input type="number" id="updatedCost" name="updatedCost" placeholder="Enter updated cost" required>
+            <label for="updatedNumberOFPage">Updated Number of Pages:</label>
+            <input type="number" id="updatedNumberOFPage" name="updatedNumberOFPage" placeholder="Enter updated pages" required>
+            <button type="submit">Update Book</button>
+        </form>
+    </section>
+
+    <section id="deleteBook">
+        <h2>Delete a Book</h2>
+        <form id="deleteBookForm">
+            <label for="deleteBookId">Book ID:</label>
+            <input type="number" id="deleteBookId" name="deleteBookId" placeholder="Enter book ID to delete" required>
+            <button type="submit">Delete Book</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 Book CRUD Application. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
